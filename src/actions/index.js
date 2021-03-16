@@ -17,15 +17,15 @@ export function fetchRecentPosts() {
     }
 }
 
-export function fetchPostsWithQuery() {
+export function fetchPostsWithQuery(query, callback) {
     return function(dispatch) {
       axios.get(`https://api.dailysmarty.com/searcg?q=${query}`)
         .then(response => {
-            console.log(response.data);
             dispatch({
                 type:SET_RESULTS_POSTS,
                 playload: response.data.posts
             })
+            if (callback) {callback()}
         }); 
     }
 }
