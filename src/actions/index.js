@@ -13,3 +13,16 @@ export function fetchRecentPosts() {
         }); 
     }
 }
+
+export function fetchPostsWithQuery() {
+    return function(dispatch) {
+      axios.get(`https://api.dailysmarty.com/searcg?q=${query}`)
+        .then(response => {
+            console.log(response.data);
+        //     dispatch({
+        //         type:SET_RECENT_POSTS,
+        //         playload: response.data.posts
+        //     })
+        // }); 
+    }
+}
