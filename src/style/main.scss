@@ -18,3 +18,8 @@ body {
     justify-content: center;
     //grid-template-rows: 1fr 2fr 1fr;
 }
+
+$color-gray-one: #666666;
+$color-grey-two: #B3B3B3;
+
+@import './searchBar';
