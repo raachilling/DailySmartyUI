@@ -18,7 +18,7 @@ export default class Home extends Component {
     return (
       <div className="home">
         <Logo />
-        <SearchBar onsubmit={(query) => this.handleSearchBarSubmit(query)}/>
+        <SearchBar page="home" onsubmit={(query) => this.handleSearchBarSubmit(query)}/>
         <RecentPosts />
       </div>
     );
